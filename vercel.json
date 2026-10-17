@@ -9,5 +9,15 @@
     { "source": "/upsellkitferramentas", "destination": "/upsellkitferramentas/index.html" },
     { "source": "/upsellkitferramentas-checkout", "destination": "/upsellkitferramentas-checkout/index.html" },
     { "source": "/meus-pedidos", "destination": "/meus-pedidos/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)\\.js",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    },
+    {
+      "source": "/upsells/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    }
   ]
 }
